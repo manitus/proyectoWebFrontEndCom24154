@@ -1,0 +1,206 @@
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: pink;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav{
+    background-color: rgb(239, 119, 223);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 12px 5px 7px;
+    margin-top: 10px; 
+    margin-right: 12px;
+    margin-bottom: 5px ;
+    margin-left: 7px;
+}
+
+footer{
+    background-color:rgb(165, 16, 118);
+    position: fixed;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+}
+
+/* px nos indica el tamaño en pixeles
+
+   % nmos indica el tamaño en relacion al elemento padre
+
+   vw nos indica el tamaño en relacion al ancho de la pantalla
+
+   vh en relacion al alto de la pantalla
+
+ vw vh */
+
+
+h1{
+    color: rgb(216, 88, 197);
+    background-color:white;
+
+}
+.logomdeli{
+    height: 100px ;
+    width: 100px;
+    border: 5px solid whitesmoke;
+    border-radius: 360px;
+    position: relative;
+
+
+}
+
+h2{
+    text-align: center;
+    font-style: oblique;
+    color: rgb(216, 88, 197);
+    
+}
+
+h3{
+    text-align: center;
+    font-style: oblique;
+    color: rgb(216, 88, 197);
+    font-family: 'Rubik', sans-serif;
+}
+
+.encabezado{
+    
+    background-color: rgb(230, 196, 145);
+    padding: 30px;
+    margin: 10px;
+    margin-left: 300px ;
+    margin-right: 300px;
+    font-size:xx-large;
+    
+}
+
+div{
+     margin-left: 30px;    
+}
+
+
+
+section{
+    max-width:100vw;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.card{
+    border: 5px solid rgb(216, 88, 197);
+    border-radius: 30px;
+    width:90%;
+    padding: 15px;
+    margin-left: 30px;
+    background-color: blanchedalmond;
+    margin:0 auto;
+    margin-bottom: 16px;
+    background-color: rgb(238, 226, 233);
+    
+}
+
+.card-img{
+    height: 250px;
+    width: 150px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    border: 4px solid rgb(216, 88, 197); 
+}
+
+.card-title {
+    color: rgb(216, 88, 197);
+    background-color:white;
+
+    text-align: center;
+    font-size: 30px;
+    
+    margin: 20px;
+    margin-bottom: 25px;
+}
+
+.card-text {
+    color: rgb(216, 88, 197);
+    
+    font: 25px bolder;
+
+}
+
+
+
+
+h4 {
+    color: rgb(216, 88, 197);
+    background-color:white;
+    font-family: 'Rubik', sans-serif;
+}
+
+button{
+    
+    background-color: azure;
+    background:#444;
+    width: 150px;
+    height: 40px;
+}
+
+.navBotones{
+    background-color: pink;
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 5px ;
+    margin: 20px;
+}
+
+.navBotones:hover{
+    background-color: rgb(224, 52, 81);
+    font-weight: bold;
+    font-size: px;
+}
+
+
+#ultima_card{
+    margin-bottom: 80px;
+}
+
+#primera_card{
+    margin-right: 60px;
+}
+
+.final{
+    margin-left: 550px;
+    width: 300px;
+    height: 80px;
+    font-size: 20px;
+    
+}
+
+.tituloFinal{
+    justify-content: center;
+    padding-top: 10px;
+    margin-bottom: 60px;
+    font-size: 25px;
+    
+}
+
