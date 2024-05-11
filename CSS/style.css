@@ -3,11 +3,6 @@ body {
     padding:0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-
-    background-image:url(../IMG/20240131_153935_0000.png);
-    background-repeat: no-repeat;
-    position: center center;
-
 }
 
 header{
@@ -21,7 +16,6 @@ nav{
     background-color: rgb(239, 119, 223);
     padding: 20px;
     text-align: center;
-
     position: sticky;
     top: 0;
 
@@ -31,30 +25,8 @@ a{
     color: #fff;
     text-decoration: none;
     margin: 10px 12px 5px 7px;
-    margin-top: 10px; 
-    margin-right: 12px;
-    margin-bottom: 5px ;
-    margin-left: 7px;
 }
 
-footer{
-    background-color:rgb(165, 16, 118);
-    position: fixed;
-    color: #fff;
-    width: 100%;
-    bottom: 0;
-    height: 21%;
-
-}
-footer>p{
-    position: relative;
-    left: 500px;
-    bottom:30px;
-}
-.contenedorLinksFooter{
-    display:block;
-    margin-bottom: 5px;
-}
 
 /* px nos indica el tamaño en pixeles
 
@@ -66,6 +38,22 @@ footer>p{
 
  vw vh */
 
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 h1{
     color: rgb(216, 88, 197);
@@ -86,7 +74,7 @@ h2{
     text-align: center;
     font-style: oblique;
     color: rgb(216, 88, 197);
-    
+
 }
 
 h3{
@@ -97,18 +85,16 @@ h3{
 }
 
 .encabezado{
-    
+
     background-color: rgb(230, 196, 145);
     padding: 30px;
-    margin: 10px;
-    margin-left: 300px ;
-    margin-right: 300px;
+    margin: 10px 300px;
     font-size:xx-large;
-    
+
 }
 
 div{
-     margin-left: 30px;    
+    margin-left: 30px;
 }
 
 
@@ -125,22 +111,33 @@ section{
     width:90%;
     padding: 15px;
     margin-left: 30px;
-    background-color: blanchedalmond;
-    margin:0 auto;
     margin-bottom: 16px;
     background-color: rgb(238, 226, 233);
-    
+
 }
 
 .card-img{
+    transition: transform 0.3s ease;
     height: 250px;
-    width: 150px;
     display: block;
     width: 60%;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
     border-radius: 30px;
-    border: 4px solid rgb(216, 88, 197); 
+    border: 4px solid rgb(216, 88, 197);
+}
+
+.card-img{
+    transition: transform 0.3s ease;
+    height: 250px;
+    display: block;
+    width: 60%;
+    margin: 0 auto 50px;
+    border-radius: 30px;
+    border: 4px solid rgb(216, 88, 197);
+}
+
+.card-img:hover {
+    transform: scale(1.1);
 }
 
 .card-title {
@@ -149,14 +146,13 @@ section{
 
     text-align: center;
     font-size: 30px;
-    
-    margin: 20px;
-    margin-bottom: 25px;
+
+    margin: 20px 20px 25px;
 }
 
 .card-text {
     color: rgb(216, 88, 197);
-    
+
     font: 25px bolder;
 
 }
@@ -171,8 +167,7 @@ h4 {
 }
 
 button{
-    
-    background-color: azure;
+
     background:#444;
     width: 150px;
     height: 40px;
@@ -193,7 +188,7 @@ button{
 .navBotones:hover{
     background-color: rgb(224, 52, 81);
     font-weight: bold;
-    font-size: px;
+    font-size: 12px;
 }
 
 
@@ -210,7 +205,7 @@ button{
     width: 300px;
     height: 80px;
     font-size: 20px;
-    
+
 }
 
 .tituloFinal{
@@ -218,6 +213,5 @@ button{
     padding-top: 10px;
     margin-bottom: 60px;
     font-size: 25px;
-    
-}
 
+}
