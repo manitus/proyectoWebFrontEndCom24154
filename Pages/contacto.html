@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../IMG/20240131_153935_0000.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <link rel="stylesheet" href="../CSS/style.css" />
     <title>Contacto</title>
     <style>
@@ -24,9 +25,49 @@
         
 
     </nav>
-    <h1>Podes encontrarnos en:</h1>
 
-    <a style="color: black" href="https://instagram.com/mariedelicatessen?igshid=ZDdkNTZiNTM=" >Instagram</a>
+    <div class="row">
+        <div class="col-md-12 contact-form">
+            <form action="#" method="post" name="contact" id="contacto">
+                <input type="hidden" name="subject" value="Formulario autom&aacute;tico desde la Web" />
+                <h1>Contáctenos</h1>
+                <p><!--<strong>Dirección postal:</strong> <br>-->
+                    <strong>Venta telefónica:</strong> 0800-555-5555<br>
+                    <!--<strong>Sitio Web:</strong> <br>-->
+                    <strong>E-mail:</strong> <br>
+                    <strong>Horario de atención:</strong> Lunes a Viernes de 08:00 a 19:00 hs y Sábados de 10:00 a 14:00 hs.</p>
+                <p>Por favor complete el formulario para dejar su consulta o comentario.</p>
+
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" autofocus value="" class="form-control" title="Nombre" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>Apellido</label>
+                        <input type="text" name="apellido" value="" class="form-control" title="Apellido" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>E-mail:</label>
+                        <input type="email" name="email" value="" class="form-control" title="E-mail:" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>Tel&eacute;fono:</label>
+                        <input type="text" name="tel" value="" class="form-control" title="Tel&eacute;fono:" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Comentarios</label>
+                        <textarea name="consulta" required class="form-control" rows="8"></textarea>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                        <button type="submit" name="Submit" class="btn load btn-success pull-right" aria-label="ENVIAR" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Procesando">ENVIAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <h1>Podés encontrarnos en:</h1>
     <footer> 
         
         <h2>
