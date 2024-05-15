@@ -7,11 +7,15 @@
     <link rel="icon" type="image/png" href="../IMG/20240131_153935_0000.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/contacto.css">
     <title>Contacto</title>
     <style>
-
+          .custom-checkbox label {
+            font-size: 22px;
+            color: hotpink;
+        }
     </style>
-
+    </div>
 </head>
 <body>
     <nav>
@@ -31,35 +35,59 @@
             <form action="#" method="post" name="contact" id="contacto">
                 <input type="hidden" name="subject" value="Formulario autom&aacute;tico desde la Web" />
                 <h1>Contáctenos</h1>
+                <!-- Aquí está la imagen -->
+                <img src="../IMG/envelope.png" alt="Imagen de contacto" style="width: 200px; height: auto;">
                 <p><!--<strong>Dirección postal:</strong> <br>-->
                     <strong>Venta telefónica:</strong> 0800-555-5555<br>
-                    <!--<strong>Sitio Web:</strong> <br>-->
-                    <strong>E-mail:</strong> <br>
-                    <strong>Horario de atención:</strong> Lunes a Viernes de 08:00 a 19:00 hs y Sábados de 10:00 a 14:00 hs.</p>
-                <p>Por favor complete el formulario para dejar su consulta o comentario.</p>
 
+                    <p></p>
+                    <!--<strong>Sitio Web:</strong> <br>-->
+                    <strong>E-mail: </strong> mail@mariedelicatessen.com.ar  <br>
+                    <p></p>
+                    <strong>Horario de atención:</strong> Lunes a Viernes de 08:00 a 19:00 hs y Sábados de 10:00 a 14:00 hs.</form>
+                     <p></p>
+                    <p>Por favor complete el formulario para dejar su consulta o comentario.</p>
                 <div class="row">
                     <div class="form-group col-md-4">
-                        <label>Nombre</label>
+                        <label>Nombre:</label>
                         <input type="text" name="nombre" autofocus value="" class="form-control" title="Nombre" required>
+                        <p></p>
+                        <p></p>
+                        <label for="motivo">Motivo de Contacto:</label><br>
+                        <select id="motivo" name="motivo" class="select-height">
+                            <option value="Consulta">Consulta</option>
+                            <option value="Pedido especial">Pedido Especial</option>
+                            <option value="Compra">Compra</option>
+                            <option value="Otros">Otros</option>
+                        </select><br>
                     </div>
                     <div class="form-group col-md-4">
-                        <label>Apellido</label>
+                        <label>Apellido:</label>
                         <input type="text" name="apellido" value="" class="form-control" title="Apellido" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label>E-mail:</label>
-                        <input type="email" name="email" value="" class="form-control" title="E-mail:" required>
+                        <input type="email" name="email" value="" class="form-control" title="E-mail" required>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label>Tel&eacute;fono:</label>
-                        <input type="text" name="tel" value="" class="form-control" title="Tel&eacute;fono:" required>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label>Teléfono:</label>
+                            <input type="text" name="tel" value="" class="form-control" title="Teléfono:" required>
+                        </div>
+                        <div class="form-group d-flex align-items-center">
+                            <label class="mr-3">Boletín:</label>
+                            <div class="custom-checkbox mr-3">
+                                <input type="checkbox" id="suscripcion" name="suscripcion" value="suscripcion">
+                                <label for="suscripcion">Suscribite a nuestro boletín!</label>
+                            </div>
+                        </div>
+
+                    <div class="form-group col-md-10">
+                        <label>Comentario:</label>
+                        <textarea name="comentario" rows="6" class="form-control" title="Comentario" required></textarea>
                     </div>
-                    <div class="form-group col-md-12">
-                        <label>Comentarios</label>
-                        <textarea name="consulta" required class="form-control" rows="8"></textarea>
-                    </div>
-                    <div class="form-group col-md-4 col-sm-4 col-xs-12">
+
+                    <div class="form-group col-md-6 col-sm-6 col-xs-10 margin-top">
                         <button type="submit" name="Submit" class="btn load btn-success pull-right" aria-label="ENVIAR" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Procesando">ENVIAR</button>
                     </div>
                 </div>
@@ -71,7 +99,7 @@
     <footer> 
         
         <h2>
-            Para más información no dejes de mirar nuestras redes!
+            Para más información seguinos en nuestras redes!
         </h2>
         
         <div class="contenedorLinksFooter">
@@ -90,10 +118,7 @@
 
         </div>
         <p>&copy; 2024 Curso de Desarrollo Web</p>
-    </footer>
-   
-
-
-   
-</body>
+    </footer></div></body>
 </html>
+
+
