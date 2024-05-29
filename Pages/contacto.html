@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../IMG/20240131_153935_0000.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css" />
     <link rel="stylesheet" href="../CSS/contacto.css">
     <title>Contacto</title>
@@ -89,13 +91,34 @@
 
                     <div class="form-group col-md-6 col-sm-6 col-xs-10 margin-top">
                         <button type="submit" name="Submit" class="btn load btn-success pull-right" aria-label="ENVIAR" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Procesando">ENVIAR</button>
+                        <script>
+                            alertify.defaults.glossary.title = 'Marie delicatessen';
+                            alertify.defaults.theme.ok = "btn load btn-success pull-right";
+
+                            document.querySelector('button[name="Submit"]').addEventListener('click', function(event) {
+                                // Get form fields
+                                var nombre = document.querySelector('input[name="nombre"]');
+                                var apellido = document.querySelector('input[name="apellido"]');
+                                var email = document.querySelector('input[name="email"]');
+                                var tel = document.querySelector('input[name="tel"]');
+                                var comentario = document.querySelector('textarea[name="comentario"]');
+
+                                // Check if fields are empty
+                                if (!nombre.value || !apellido.value || !email.value || !tel.value || !comentario.value) {
+                                    event.preventDefault(); // prevent the form from submitting
+                                    alertify.alert('Por favor, llene los campos.');
+                                } else {
+                                    // If all fields are filled, show the alert and submit the form
+                                    alertify.alert('Enviado! Pronto nos estaremos comunicando contigo!');
+                                }
+                            });
+                        </script>
                     </div>
                 </div>
-            </form>
-        </div>
+                </div>
     </div>
 
-    <h1>Podés encontrarnos en:</h1>
+        <h2> .   </h2>
     <footer> 
         
         <h2>
