@@ -1,85 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marie Delicatessen</title>
 
     <link rel="stylesheet" href="CSS/style.css" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="IMG/20240131_153935_0000.png">
-    <style>
+    <!-- fuente íconos modal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <style>
         /* Estilos adicionales para la colocación de tarjetas */
         .contenedor-tarjetas {
-            display: flex; /* Activa el modelo de caja flexible (Flexbox) */
+            display: flex;
+            /* Activa el modelo de caja flexible (Flexbox) */
         }
-
-    </style>
+    </style> -->
 </head>
 
 <body>
-        <header>
-            <h1>Mariedelicatessen </h1>
-            <img class="logomdeli" src="./IMG/20240131_153935_0000.png" alt="logo Mariedelicatessen">
-            
-     
-            
-        </header>
-        <br>
-        <nav>
-            <div class="contenedorNav">
-                
-                <div>
-                    <button class="navBotones" ><a href="#"><i class="fa-solid fa-house"></i> Inicio</a></button>
-                    <button class="navBotones" ><a href="Pages/contacto.html"><i class="fa-solid fa-cake-candles"></i> Contacto</a></button>
-                    <button class="navBotones" ><a href="#"><i class="fa-solid fa-cake-candles"></i> productos</a></button>
-                    <button class="navBotones" ><a href="#"><i class="fa-solid fa-cart-plus"></i>carrito</a></button>
-                    <button class="navBotones" ><a href="Pages/ubicacion.html"><i class="fa-solid fa-location-dot"></i> Ubicación</a></button>
-                    <button class="navBotones" ><a href="#"><i class="fa-solid fa-heart"></i> Favoritos</a></button>
-                </div>              
+    <header>
+        <h1>Mariedelicatessen </h1>
+        <img class="logomdeli" src="./IMG/20240131_153935_0000.png" alt="logo Mariedelicatessen">
+
+
+
+    </header>
+    <br>
+    <nav>
+        <div class="contenedorNav">
+
+            <div>
+                <button class="navBotones"><a href="#"><i class="fa-solid fa-house"></i> Inicio</a></button>
+                <button class="navBotones"><a href="Pages/contacto.html"><i class="fa-solid fa-cake-candles"></i>
+                        Contacto</a></button>
+                <button class="navBotones"><a href="#"><i class="fa-solid fa-cake-candles"></i> productos</a></button>
+                <button class="navBotones"><a href="#"><i class="fa-solid fa-cart-plus"></i>carrito</a></button>
+                <button class="navBotones"><a href="Pages/ubicacion.html"><i class="fa-solid fa-location-dot"></i>
+                        Ubicación</a></button>
+                <button class="navBotones"><a href="#"><i class="fa-solid fa-heart"></i> Favoritos</a></button>
+            </div>
         </div>
-               
-
-        
-            
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+    </nav>
+
+    <section>
+        <h2>¡Bienvenidos a mi Pastelería!</h2>
+
+        <div class="container">
+
+<!--             
+            <div class="contenedor-logo-banner " >
+                <img src="IMG/20240131_153935_0000.png" alt="logo" width="1600px" >
+            </div> -->
+            <h2>productos</h2>
+            <div class="contenedor-tarjetas">
+                <div class="card" id="primera_card">
+                    <div>
+                        <img class="card-img" src="./IMG/20230904_141034.jpg" alt="Tres mouses">
+                    </div>
+                    <div class="card-info">
+                        <p class="card-title"> Torta Tres Mouses</p>
+                        <p class="card-text">tiene 3 mouses</p>
+                        <p class="card-price">$250</p>
+                        <a href="#" class="contenedor-tarjetas-btn btn-default" data-btn-action="add-btn-carrito" data-modal="#jsModalCarrito">Agregar al carrito</a>
                         
-
+                        
+                    </div>
+                    
+                    <!-- <button class="navBotones">Ingresá acá</button> -->
+                </div>
+                
+                <div class="card" id="primera_card">
+                    <div>
+                        <img class="card-img" src="/IMG/20230909_101556.jpg" alt="Pavloba">
+                    </div>
+                    <div class="card-info">
+                        <p class="card-title"> Torta Pavlova</p>
+                        <p class="card-text">la preferida de Jrushchev</p>
+                        <p class="card-price">$350</p>
+                        <a href="#" class="contenedor-tarjetas-btn btn-default"  data-btn-action="add-btn-carrito" data-modal="#jsModalCarrito">Agregar al carrito</a>
+                        
+                        
+                    </div>
+                    
+                    <!-- <button class="navBotones">Ingresá acá</button> -->
+                </div>
+                <div class="card" id="primera_card">
+                    <div>
+                        <img class="card-img" src="./IMG/20230927_134653.jpg" alt="Chocotorta con golosinas">
+                    </div>
+                    <div class="card-info">
+                        <p class="card-title"> Chocotorta con golosinas</p>
+                        <p class="card-text">Yiya la recomienda</p>
+                        <p class="card-price">$320</p>
+                        <a href="#" class="contenedor-tarjetas-btn btn-default"  data-btn-action="add-btn-carrito" data-modal="#jsModalCarrito">Agregar al carrito</a>
+                        
+                        
+                    </div>
+                    
+                    <!-- <button class="navBotones">Ingresá acá</button> -->
+                </div>
+                <div class="card">
+                    <div>
+                        <img class="card-img" src="./IMG/20231027_124241.jpg" alt="Tiramisu">
+                    </div>
+                    <div class="card-info">
+                        <p class="card-title"> Tiramisú</p>
+                        <p class="card-text">Muy riiico</p>
+                        <p class="card-price">$290</p>
+                        <a href="#" class="contenedor-tarjetas-btn btn-default"  data-btn-action="add-btn-carrito" data-modal="#jsModalCarrito">Agregar al carrito</a>
+                        
+                        
+                    </div>
+                    
+                    <!-- <button class="navBotones">Ingresá acá</button> -->
+                </div>
+                
+            </div>
             
+            <div class="modal " id="jsModalCarrito"> <!-- acá era modal active -->
+                <div class="modal-container">
+                    <button type="button" class="modal-cerrar fa-solid fa-xmark jsModalCerrar"></button>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2><i class="fa-solid fa-cart-shopping"></i>Carrito</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-lista">
+                                <div class="modal-item">
+                                    <div class="modal-thumb">
+                                        <img src="IMG/20230904_141034.jpg" alt="Tres mouses" width="200px">
+                                    </div>
+                                    <div class="modal-text-product">
+                                        <p>Tres mouses</p>
+                                        <p><strong>$250</strong></p>
+                                    </div>
+                                </div>
 
-        </nav>
-    
-        <section>
-            <h2>¡Bienvenidos a mi Pastelería!</h2>
-    
-        <div class="contenedor-tarjetas">
-            <article class="card" id="primera_card">
-                <h4 class="card-title"> Torta Tres Mouses</h4>
-                <img class="card-img" src="./IMG/20230904_141034.jpg" alt="imagen de la torta tres mouses">
-                <p class="card-text">Descripción de la torta</p>
-                <button class="navBotones">Ingresá acá</button>
-            </article>
+                                <div class="modal-item">
+                                    <div class="modal-thumb">
+                                        <img src="IMG/20230909_101556.jpg" alt="Pavlova" width="200px">
+                                    </div>
+                                    <div class="modal-text-product">
+                                        <p>Pavlova</p>
+                                        <p><strong>$350</strong></p>
+                                    </div>
+                                </div>
 
+                                <div class="modal-item">
+                                    <div class="modal-thumb">
+                                        <img src="IMG/20230927_134653.jpg" alt="Chocotorta" width="200px">
+                                    </div>
+                                    <div class="modal-text-product">
+                                        <p>Chocotorta con golosinas</p>
+                                        <p><strong>$320</strong></p>
+                                    </div>
+                                </div>
+
+                                <div class="modal-item">
+                                    <div class="modal-thumb">
+                                        <img src="IMG/20231027_124241.jpg" alt="Tiramisu" width="200px">
+                                    </div>
+                                    <div class="modal-text-product">
+                                        <p>Tiramisú</p>
+                                        <p><strong>$290</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="modal-list-price">
+                                <ul>
+                                    <li>Subtotal: <strong>$0.00</strong></li>
+                                    <li>Descuento: <strong>$0.00</strong></li>
+                                </ul>
+                                <h4 class="modal-total-carrito">Total: $0.00</h4>
+                            </div>
+                            <div class="modal-btns">
+                                <a href="#" class="btn-border">Ir al carrito</a>
+                                <a href="#" class="btn-primary">Comprar ahora</a>
+                            </div>
+                                
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 
             <article class="card">
                 <h4 class="card-title"> Torta Pavloba</h4>
                 <img class="card-img" src="./IMG/20230909_101556.jpg" alt="PAvloba">
                 <p class="card-text">Descipción de la torta</p>
                 <button class="navBotones">Ingresá acá</button>
-            </article>
+            </article> -->
         </div>
-    
-        <div class="contenedor-tarjetas">   
+
+        <!-- <div class="contenedor-tarjetas">
             <article class="card" id="segunda_card">
                 <h4 class="card-title"> Chocotorta con golosinas</h4>
                 <img class="card-img" src="./IMG/20230927_134653.jpg" alt="imagen de la chocotorta">
@@ -94,42 +239,42 @@
                 <button class="navBotones">Ingresá acá</button>
             </article>
 
-        </div>
+        </div> -->
 
         <div>
-        <h3 class="tituloFinal">Muchas gracias por visitar mi página!</h3>
+            <h3 class="tituloFinal">Muchas gracias por visitar mi página!</h3>
         </div>
 
-        </section>
-    
-        
+    </section>
 
-    <footer> 
-        
+
+
+    <footer>
+
         <h2>
             Para más información no dejes de mirar nuestras redes!
         </h2>
-        
+
         <div class="contenedorLinksFooter">
-            <a href="https://www.instagram.com/mariedelicatessen/?igshid=ZDdkNTZiNTM%3D" target="_blank" id="link_footer1">
+            <a href="https://www.instagram.com/mariedelicatessen/?igshid=ZDdkNTZiNTM%3D" target="_blank"
+                id="link_footer1">
                 <img src="IMG/instagram.png" alt="instagram" width="50">
             </a>
             <a href="https://www.facebook.com/" target="_blank" id="link_footer2">
                 <img src="IMG/facebook.png" alt="facebook" width="50" id="link_footer3">
             </a>
-            <a href="https://ar.pinterest.com/" target="_blank" class="link_footer4"><img src="IMG/pinterest.png" alt="pinterest" width="50">
+            <a href="https://ar.pinterest.com/" target="_blank" class="link_footer4"><img src="IMG/pinterest.png"
+                    alt="pinterest" width="50">
             </a>
             <a href="https://twitter.com/?lang=es" target="_blank" class="link_footer4">
                 <img src="IMG/x.png" alt="x" width="50">
             </a>
-          
+
 
         </div>
         <p>&copy; 2024 Curso de Desarrollo Web</p>
     </footer>
+    <script src="js/index.js"></script>
 </body>
-</html>    
 
-
-    
-    
+</html>
