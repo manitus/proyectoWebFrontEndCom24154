@@ -1,49 +1,249 @@
 *{
-    box-sizing: border-box;
-}
-body {
-    margin:0;
+    margin: 0;
     padding:0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;;
 }
-
 header{
-    background-color: pink;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background: url(../img/logo_delicatessen.png);
+    background-size: cover;
+    background-position:center;
+    height: 300px;
 }
-
-nav{
-    background-color: rgb(239, 119, 223);
-    padding: 20px;
+header h1{
     text-align: center;
+    font-size: 35px;
+    /* background-color: #000; */
+    color: rgb(218, 45, 192);
+    padding: 30px 0;
+}
+/* estilo del nav */
+.contenedorNav{
+    background-color: rgb(239, 119, 223);
+    padding: auto;
+
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
     position: sticky;
     top: 0;
     z-index: 100;
 
 
 }
+.navBotones{
+    background-color: pink;
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+    text-align:center;
+    border: 3px solid white;
+    border-radius: 5px ;
+    margin: 20px;
+}
 
+.navBotones:hover{
+    background-color: rgb(224, 52, 81);
+    font-weight: bold;
+    font-size: 12px;
+}
 a{
     color: #fff;
     text-decoration: none;
     margin: 10px 12px 5px 7px;
 }
+h2{
+    text-align: center;
+    font-style: oblique;
+    color: #fff;
 
+}
+.contenedor{
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* oculto lo que queda fuera del .contenedor */
+    contain: paint;
+}
+/*CONTENEDOR DE ITEMS */
+#contenedor-h2{
+    justify-content: center;
+    color: rgb(85, 6, 73);
+}
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap:15px;
+    grid-row-gap: 15px;
+    /* width: 60%; */
+    width: 100%;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item{
+    background-color: rgb(247, 180, 191);
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid rgb(238, 140, 223);
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item .img-item{
+    width: 100%;
+}
+.contenedor .contenedor-items .item:hover{
+    box-shadow: 0 0 10px rgb(231, 176, 223);
+    scale: 1.05;
+}
+.contenedor .contenedor-items .item .titulo-item{
+    display: block;
+    color: rgb(85, 6, 73);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenedor .contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
 
-/* px nos indica el tamaño en pixeles
+.contenedor .contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color:rgb(216, 88, 197);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* seccion carrito */
+.carrito{
+    border: 1px solid rgb(85, 6, 73);
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 77px;
+    transition: .3s;
+    /*para ocultar */
+    margin-right: -100%;
+    opacity: 0;
+}
+.carrito .header-carrito{
+    background-color: rgb(216, 88, 197);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+.carrito .carrito-item{
+    color: rgb(85, 6, 73);
+    background-color: rgb(247, 180, 191);
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    position: relative;
+    border-bottom: 1px solid rgb(87, 20, 77);
+    padding: 20px;
+}
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+.carrito .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width:30px;
+    padding: 5px;
+    text-align: center;
+}
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 20%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color:rgb(117, 12, 101);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgb(117, 12, 101);
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    /* z-index: 20; */
+}
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
+}
 
-   % nmos indica el tamaño en relacion al elemento padre
-
-   vw nos indica el tamaño en relacion al ancho de la pantalla
-
-   vh en relacion al alto de la pantalla
-
- vw vh */
-
-/* Estilos para el pie de página */
+.carrito-total{
+    background-color: rgb(230, 196, 145);
+    padding: 30px;
+}
+.carrito-total .cantidad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carrito-total .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background:  rgb(117, 12, 101);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.carrito-total .btn-pagar:hover{
+    scale: 1.05;
+}
+/* sección footer */
 footer {
     text-align: center;
     background-color: #333;
@@ -56,411 +256,21 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
+.linkFooter:hover{
     transform: scale(1.1) ;
 }
 
-h1{
-    color: rgb(216, 88, 197);
-    background-color:white;
-
-}
-.logomdeli{
-    height: 100px ;
-    width: 100px;
-    border: 5px solid whitesmoke;
-    border-radius: 360px;
-    position: relative;
-
-
-}
-
-h2{
-    text-align: center;
-    font-style: oblique;
-    color: rgb(216, 88, 197);
-
-}
-
-h3{
-    text-align: center;
-    font-style: oblique;
-    color: rgb(216, 88, 197);
-    font-family: 'Rubik', sans-serif;
-}
-
-.encabezado{
-
-    background-color: rgb(230, 196, 145);
-    padding: 30px;
-    margin: 10px 300px;
-    font-size:xx-large;
-
-}
-
-div{
-    margin-left: 30px;
-}
-
-
-
-section{
-    max-width:100vw;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-.card{
-    border: 3px solid rgb(216, 88, 197);
-    border-radius: 15px;
-    width:90%;
-    padding: 10px;
-    margin-left: auto;
-    margin-bottom: 16px;
-    background-color: rgb(238, 226, 233);
-    overflow: hidden; /* ver necesidad*/
-
-}
-
-.card-img{
-    transition: transform 0.3s ease;
-    height: 190px;
-    display: block;
-    width: 100%;
-    margin: -15px;
-    margin-top: 5px;
-    border-radius: 30px;
-    /* border: 4px solid rgb(216, 88, 197); */
-    object-fit: cover; /*iguala las img*/
-    text-align: center; /*agregado*/
-}
-
-
-.card-img:hover {
-    transform: scale(1.1);
-}
-
-.card-title {
-    color: rgb(216, 88, 197);
-    /* background-color:white; */
-
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-
-    margin-bottom: 6px;
-
-    /* margin: 10px 10px 15px; */
-}
-
-.card-text {
-    color: rgb(216, 88, 197);
-
-    font: 15px bolder;
-
-}
-
-.card-price{
-    color: rgb(132, 28, 117);
-    font-size: 16px;
-    font-weight: 600;
-
-}
-
-
-
-
-h4 {
-    color: rgb(216, 88, 197);
-    background-color:white;
-    font-family: 'Rubik', sans-serif;
-}
-
-button{
-
-    background:#444;
-    width: 150px;
-    height: 40px;
-}
-
-.navBotones{
-    background-color: pink;
-    font-weight: bold;
-    color: white;
-    font-size: 13px;
-    padding: 10px;
-    text-align: center;
-    border: 3px solid white;
-    border-radius: 5px ;
-    margin: 20px;
-}
-
-.navBotones:hover{
-    background-color: rgb(224, 52, 81);
-    font-weight: bold;
-    font-size: 12px;
-}
-
-/* 
-#ultima_card{
-    margin-bottom: 80px;
-} */
-/* 
-
-
-.final{
-    margin-left: 550px;
-    width: 300px;
-    height: 80px;
-    font-size: 20px;
-
-}
-
-.tituloFinal{
-    justify-content: center;
-    padding-top: 10px;
-    margin-bottom: 60px;
-    font-size: 25px;
-
-}
-/* dentro de la section y banner */
-.container{
-    max-width: 1120px;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* display:flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom:20px;
-    gap:50px; */
-}
-img{
-    max-width: 100%;
-
-}
-/* esto hay q ver si se agranda el logo y se le hace un overflow, o bien se centra */
-.contenedor-logo-banner{  
-    /* display:flex;
-    align-items: center center; */
-    margin:60px 0;
-    z-index: 1;
-
-}
-
-/* esto tiene q compiar el estilo de las card-text */
-.modal-text-product{
-    color: rgb(216, 88, 197);
-
-    font: 25px bolder;
-
-}
-.contenedor-tarjetas{
-
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1.2rem;    /*aconsejan 1.5*/
-    margin-bottom:50px
-}
-.card-info{
-    padding: 3px;
-    text-align: center;
-}
-.contenedor-tarjetas-btn{
-    margin-top: 20px;
-}
-
-.btn-default, .btn-border, .btn-primary{
-    width:100%;
-    height: 48px;
-    line-height: 48px; /*ver*/
-    outline:0;
-    display:inline-block;
-    border-radius: 25px;
-    cursor: pointer;
-    padding:0 20;
-
-    text-decoration: none;
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-
-}
-.btn-default{
-    background-color: rgb(230, 196, 145); 
-    color: rgb(132, 28, 117);
-
-}
-.btn-default:hover{
-    background-color:  rgb(300, 226, 233);
-    color:#fff;
-
-}
-.btn-border{
-    border: 2px solid;
-    color: rgb(180, 27, 160);
-    background-color: transparent;
-}
-
-.btn-border:hover{
-    background-color:rgb(238, 226, 233);
-    color:#fff;
-}
-.btn-primary{
-    background-color: rgb(238, 226, 233);
-    color:#fff;
-}
-/* estp es del modal mismo */
-.modal{
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgb(238, 226, 233) ;
-    width: 100%;
-    max-width:350px;
-    height: 100vh;
-    visibility: hidden;
-    opacity:0;
-    transform: translateX(100%);
-    transition: all .35s ease-in;
-
-    z-index:20000;
-}
-.modal::after{
-    position: fixed;
-    top:0;
-    right:350px;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.4); /*no es opaco*/
-    z-index: 999;
-
-    opacity: 0;
-    content:'';
-    pointer-events: none;
-    transition: all .35s ease-in;
-} 
-.modal.active{   /*en linea 146 index.html es modal active, pero luego veo q es modal solo*/
-    visibility:visible;
-    opacity: 1;
-    transform: none;
-}
-.modal.active::after{
-    
-    opacity:1;
-    pointer-events: auto;
-}
-.modal-container{
-    height: 100%;
-    padding: 30px;
-    position: relative;
-    z-index: 1000;
-}
-.modal-cerrar{
-    position:absolute;
-    left: -50px;
-    top:20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(238, 226, 233) ;
-    color: rgb(228, 158, 217);
-    border:none;
-    font-size: 18px; /*ver*/
-    cursor: pointer;
-}
-.modal-info{
-    display:flex;
-    flex-flow:column;
-    height: 100%;
-    overflow: hidden;
-}
-.modal-header{
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid rgb(180, 27, 160);
-}
-.modal-header h2{
-    font-size:22px;
-    color: rgb(216, 88, 197);
-    font-weight: 600;
-}
-
-.modal-header h2 i{
-    margin-right: 10px ;
-
-}
-.modal-body{
-    position:relative;
-    overflow-x:hidden;
-    overflow-y: visible;
-    width: 100%;
-    flex-grow:1;
-}
-.modal-item{
-    display:flex;
-    align-items: center;
-}
-
-.modal-item + .modal-item{
-    margin-top: 20px;
-}
-
-.modal-thumb{
-    width: 80px;
-
-}
-
-.modal-text-product{
-    width:calc(100% - 80px);
-    padding-left: 5px; /*eran 20px*/
-
-}
-
-.modal-text-product p strong{
-    color:rgb(180, 27, 160);
-    margin-top: 6px;
-}
-
-.modal-footer{
-    padding-top: 30px;
-    margin-top: 30px;
-    border-top:1px solid rgb(180, 27, 160);
-}
-
-.modal-list-price ul li+li{
-    margin-top: 10px;
-}
-
-.modal-list-price ul li strong{
-    color: #000;
-
-}
-
-.modal-total-carrito{
-    font-size: 20px;
-    color:#000;
-    margin: 20px 0;
-
-}
-.modal-btns{
-    padding-top: 30px;
-    border-top: 1px solid rgb(180, 27, 160);
-}
-
-.modal-btns a+a{
-    margin-top: 15px;
-}
-
-@media (max-width: 600px){
-    .contenedor-tarjetas{
-        grid-template-columns: 1fr;
+/* Responsive */
+@media screen and (max-width: 850px) {
+    .contenedor {
+      display: block;
     }
-}
-@media (max-width: 820px){
-    .contenedor-tarjetas{
-        grid-template-columns: repeat(2,1fr);
+    .contenedor-items{
+        width: 100% !important;
+        gap: aut o;
     }
-}
+    .carrito{
+        width: 100%;
+    }
+  }
+
